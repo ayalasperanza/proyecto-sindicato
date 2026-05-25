@@ -237,8 +237,12 @@ const lightboxClose  = document.getElementById('lightboxClose');
 
 function construirItemGaleria(item) {
   const grande  = item.grande ? ' grande' : '';
-  const imgHTML = item.archivo
-    ? `<div class="galeria-img" style="background-image:url('assets/galeria/${item.archivo}');background-size:cover;background-position:center top;"></div>`
+  // Encode filename para soportar espacios y caracteres especiales
+  const archivoUrl = item.archivo
+    ? item.archivo.split('/').map(encodeURIComponent).join('/')
+    : null;
+  const imgHTML = archivoUrl
+    ? `<div class="galeria-img" style="background-image:url('assets/galeria/${archivoUrl}');background-size:cover;background-position:center top;"></div>`
     : `<div class="galeria-img ${item.placeholder || 'gi-1'}"></div>`;
 
   const div = document.createElement('div');
@@ -269,7 +273,8 @@ function iniciarEventosGaleria() {
     item.addEventListener('click', () => {
       const archivo = item.dataset.archivo;
       if (archivo) {
-        lightboxImg.style.background = `url('assets/galeria/${archivo}') center/cover no-repeat`;
+        const archivoUrl = archivo.split('/').map(encodeURIComponent).join('/');
+        lightboxImg.style.background = `url('assets/galeria/${archivoUrl}') center/cover no-repeat`;
       } else {
         const imgEl = item.querySelector('.galeria-img');
         lightboxImg.style.background = getComputedStyle(imgEl).background;

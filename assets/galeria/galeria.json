@@ -1,25 +1,52 @@
 [
   {
-    "archivo": null,
+    "archivo": "fotos asamblea 1.jpg",
     "placeholder": "gi-1",
     "categoria": "asamblea",
-    "titulo": "Asamblea General Ordinaria 2025",
-    "etiqueta": "Asamblea General 2025",
-    "desc": "Más de 400 afiliados participaron de la asamblea anual donde se aprobó el balance y el plan de acción.",
+    "titulo": "Asamblea Informativa — Sector Transporte, Abril 2026",
+    "etiqueta": "Asamblea Sector Transporte",
+    "desc": "Asamblea informativa del Sector Transporte realizada en abril de 2026 con la participación activa de afiliados.",
+    "grande": true
+  },
+  {
+    "archivo": "fotos asamblea 2.jpg",
+    "placeholder": "gi-2",
+    "categoria": "asamblea",
+    "titulo": "Asamblea Informativa — Sector Transporte, Abril 2026",
+    "etiqueta": "Afiliados en asamblea",
+    "desc": "Los trabajadores del Sector Transporte reunidos en asamblea informativa. La participación y la organización son la base de SICONAP/S.",
+    "grande": false
+  },
+  {
+    "archivo": "fotos asamblea 3.jpg",
+    "placeholder": "gi-3",
+    "categoria": "asamblea",
+    "titulo": "Asamblea Informativa — Sector Transporte, Abril 2026",
+    "etiqueta": "Reunión sindical Abril 2026",
+    "desc": "Momento de la asamblea informativa donde se tratan los acuerdos y el estado de las negociaciones colectivas.",
+    "grande": false
+  },
+  {
+    "archivo": "fotos asamblea 4.jpg",
+    "placeholder": "gi-4",
+    "categoria": "asamblea",
+    "titulo": "Asamblea Informativa — Sector Transporte, Abril 2026",
+    "etiqueta": "Sector Transporte unido",
+    "desc": "La unidad de los trabajadores del Sector Transporte se refleja en cada asamblea. SICONAP/S presente en cada momento.",
     "grande": false
   },
   {
     "archivo": null,
-    "placeholder": "gi-2",
+    "placeholder": "gi-5",
     "categoria": "evento",
     "titulo": "Día Internacional del Trabajador — 1° de Mayo",
-    "etiqueta": "1° de Mayo 2025",
+    "etiqueta": "1° de Mayo",
     "desc": "SICONAP/S encabezó la marcha del Día del Trabajador en Ciudad del Este junto a cientos de afiliados.",
-    "grande": true
+    "grande": false
   },
   {
     "archivo": null,
-    "placeholder": "gi-3",
+    "placeholder": "gi-6",
     "categoria": "directiva",
     "titulo": "Comisión Directiva en sesión",
     "etiqueta": "Sesión Directiva",
@@ -28,7 +55,7 @@
   },
   {
     "archivo": null,
-    "placeholder": "gi-4",
+    "placeholder": "gi-7",
     "categoria": "trabajadores",
     "titulo": "Trabajadores del sector transporte",
     "etiqueta": "Sector Transporte",
@@ -37,25 +64,7 @@
   },
   {
     "archivo": null,
-    "placeholder": "gi-5",
-    "categoria": "asamblea",
-    "titulo": "Acto conmemorativo — 33 años de SICONAP/S",
-    "etiqueta": "33° Aniversario",
-    "desc": "Celebración del 33° aniversario de fundación del sindicato con la presencia de autoridades y afiliados.",
-    "grande": true
-  },
-  {
-    "archivo": null,
-    "placeholder": "gi-6",
-    "categoria": "evento",
-    "titulo": "Capacitación sindical",
-    "etiqueta": "Capacitación Sindical",
-    "desc": "Jornada de formación y capacitación para delegados y representantes de los distintos sectores.",
-    "grande": false
-  },
-  {
-    "archivo": null,
-    "placeholder": "gi-7",
+    "placeholder": "gi-8",
     "categoria": "trabajadores",
     "titulo": "Personal de Fundación TESAI",
     "etiqueta": "Fundación TESAI",
@@ -64,19 +73,20 @@
   },
   {
     "archivo": null,
-    "placeholder": "gi-8",
+    "placeholder": "gi-2",
+    "categoria": "evento",
+    "titulo": "Capacitación sindical",
+    "etiqueta": "Capacitación Sindical",
+    "desc": "Jornada de formación y capacitación para delegados y representantes de los distintos sectores.",
+    "grande": false
+  },
+  {
+    "archivo": null,
+    "placeholder": "gi-3",
     "categoria": "directiva",
     "titulo": "Firma de convenio colectivo",
     "etiqueta": "Firma de Convenio",
     "desc": "La Comisión Directiva firma el convenio colectivo que garantiza mejoras salariales para los afiliados.",
     "grande": false
-  },
-  {
-  "archivo": "asamblea-mayo-2026.jpg",
-  "categoria": "asamblea",
-  "titulo": "Título que aparece en el lightbox",
-  "etiqueta": "Texto sobre la foto",
-  "desc": "Descripción breve para el lightbox.",
-  "grande": false
-}
+  }
 ]
