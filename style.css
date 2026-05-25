@@ -1164,10 +1164,26 @@ footer {
   letter-spacing: .04em;
 }
 
+.galeria-loading {
+  grid-column: 1 / -1;
+  text-align: center; padding: 48px 0;
+  color: var(--gray); font-size: .9rem;
+  letter-spacing: .06em;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+
 .galeria-nota {
   text-align: center; margin-top: 24px;
   font-size: .82rem; color: var(--gray);
-  font-style: italic;
+  font-style: italic; line-height: 1.7;
+}
+.galeria-nota code {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px; padding: 2px 7px;
+  font-family: monospace; font-size: .8rem;
+  color: var(--green-light); font-style: normal;
 }
 
 /* ── Lightbox ── */

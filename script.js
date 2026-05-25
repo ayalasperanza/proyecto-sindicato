@@ -223,38 +223,89 @@ document.querySelectorAll('.faq-pregunta').forEach(btn => {
   });
 });
 
-// ── Galería — filtros
-document.querySelectorAll('.filtro-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filtro = btn.dataset.filtro;
-    document.querySelectorAll('.galeria-item').forEach(item => {
-      const mostrar = filtro === 'todos' || item.dataset.categoria === filtro;
-      item.classList.toggle('oculto', !mostrar);
+// ══════════════════════════════════════════════════════
+// ── GALERÍA JSON-DRIVEN ──────────────────────────────
+// Para agregar/cambiar fotos: editá assets/galeria/galeria.json
+// NO hace falta tocar index.html ni este script
+// ══════════════════════════════════════════════════════
+
+const lightbox       = document.getElementById('lightbox');
+const lightboxImg    = document.getElementById('lightboxImg');
+const lightboxTitulo = document.getElementById('lightboxTitulo');
+const lightboxDesc   = document.getElementById('lightboxDesc');
+const lightboxClose  = document.getElementById('lightboxClose');
+
+function construirItemGaleria(item) {
+  const grande  = item.grande ? ' grande' : '';
+  const imgHTML = item.archivo
+    ? `<div class="galeria-img" style="background-image:url('assets/galeria/${item.archivo}');background-size:cover;background-position:center top;"></div>`
+    : `<div class="galeria-img ${item.placeholder || 'gi-1'}"></div>`;
+
+  const div = document.createElement('div');
+  div.className = `galeria-item${grande}`;
+  div.dataset.categoria = item.categoria;
+  div.dataset.titulo    = item.titulo;
+  div.dataset.desc      = item.desc;
+  div.dataset.archivo   = item.archivo || '';
+  div.innerHTML = `${imgHTML}<div class="galeria-overlay"><span>${item.etiqueta}</span></div>`;
+  return div;
+}
+
+function iniciarEventosGaleria() {
+  // Filtros
+  document.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filtro = btn.dataset.filtro;
+      document.querySelectorAll('.galeria-item').forEach(item => {
+        item.classList.toggle('oculto', filtro !== 'todos' && item.dataset.categoria !== filtro);
+      });
     });
   });
-});
 
-// ── Galería — lightbox
-const lightbox      = document.getElementById('lightbox');
-const lightboxImg   = document.getElementById('lightboxImg');
-const lightboxTitulo= document.getElementById('lightboxTitulo');
-const lightboxDesc  = document.getElementById('lightboxDesc');
-const lightboxClose = document.getElementById('lightboxClose');
-
-document.querySelectorAll('.galeria-item').forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('.galeria-img');
-    // Copiar fondo del placeholder al lightbox
-    lightboxImg.style.background = getComputedStyle(img).background;
-    lightboxTitulo.textContent = item.dataset.titulo;
-    lightboxDesc.textContent   = item.dataset.desc;
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
+  // Lightbox
+  document.querySelectorAll('.galeria-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const archivo = item.dataset.archivo;
+      if (archivo) {
+        lightboxImg.style.background = `url('assets/galeria/${archivo}') center/cover no-repeat`;
+      } else {
+        const imgEl = item.querySelector('.galeria-img');
+        lightboxImg.style.background = getComputedStyle(imgEl).background;
+      }
+      lightboxTitulo.textContent = item.dataset.titulo;
+      lightboxDesc.textContent   = item.dataset.desc;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
   });
-});
+}
 
+async function cargarGaleria() {
+  const grid = document.getElementById('galeriaGrid');
+  if (!grid) return;
+
+  try {
+    const res = await fetch('assets/galeria/galeria.json?v=' + Date.now());
+    if (!res.ok) throw new Error('galeria.json no disponible');
+    const items = await res.json();
+
+    // Limpiar grid y renderizar desde JSON
+    grid.innerHTML = '';
+    items.forEach(item => grid.appendChild(construirItemGaleria(item)));
+    iniciarEventosGaleria();
+
+  } catch (err) {
+    // Fallback: el HTML ya tiene items estáticos
+    console.info('Galería: usando items estáticos del HTML.', err.message);
+    iniciarEventosGaleria();
+  }
+}
+
+cargarGaleria();
+
+// Cerrar lightbox
 lightboxClose.addEventListener('click', cerrarLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) cerrarLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarLightbox(); });
