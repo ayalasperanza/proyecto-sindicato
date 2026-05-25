@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SICONAP/S — Sindicato de Conductores y Servicios del Alto Paraná</title>
+  <meta name="description" content="SICONAP/S — Más de 30 años defendiendo los derechos de los trabajadores del Alto Paraná, Paraguay." />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="SICONAP/S — Sindicato de Conductores y Servicios del Alto Paraná" />
+  <meta property="og:description" content="Más de 1.000 trabajadores afiliados. 34 años protegiendo los derechos de la clase obrera en el Alto Paraná, Paraguay." />
+  <meta property="og:image"       content="assets/og-image.jpg" />
+  <meta property="og:locale"      content="es_PY" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVEGACIÓN ===== -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="assets/logo.png" alt="SICONAP/S" class="nav-logo-img" />
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#directiva">Comisión Directiva</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#asociate" class="btn-nav">Asociate</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">
+        <span class="eyebrow-flag py">PY</span>
+        Triple Frontera · Alto Paraná · Desde 1991
+      </p>
+      <h1 class="hero-title">
+        <span class="hero-word" style="--d:0">Más de</span>
+        <span class="hero-word highlight" style="--d:1">34 años</span><br>
+        <span class="hero-word" style="--d:2">protegiendo al</span><br>
+        <span class="hero-word highlight" style="--d:3">trabajador</span>
+      </h1>
+      <p class="hero-lema">Unidad · Solidaridad · Lealtad</p>
+      <p class="hero-sub">
+        SICONAP/S es la voz de más de <strong>1.250 trabajadores</strong> del Alto Paraná.
+        Con local propio, Contrato Colectivo firmado y representación en la OIT, defendemos
+        tus derechos con 34 años de trayectoria comprobada.
+      </p>
+      <div class="hero-actions">
+        <a href="#asociate" class="btn-primary btn-pulse">Quiero asociarme</a>
+        <a href="#quienes-somos" class="btn-outline">Conocer más</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">+1.250</span><span class="stat-label">Trabajadores afiliados</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">34</span><span class="stat-label">Años de trayectoria</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Sectores cubiertos</span></div>
+      </div>
+    </div>
+
+    <!-- Paisaje Triple Frontera — Itaipú + Puente + Trabajadores -->
+    <div class="hero-landscape" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Agua — río Paraná (3 capas) -->
+        <path d="M0,170 Q360,145 720,165 Q1080,182 1440,158 L1440,200 L0,200Z" fill="rgba(26,107,60,0.07)"/>
+        <path d="M0,178 Q360,158 720,172 Q1080,185 1440,168 L1440,200 L0,200Z" fill="rgba(26,107,60,0.11)"/>
+        <path d="M0,185 Q360,170 720,180 Q1080,190 1440,175 L1440,200 L0,200Z" fill="rgba(26,107,60,0.16)"/>
+        <!-- Ondas del río -->
+        <path d="M0,172 Q120,165 240,172 Q360,179 480,172 Q600,165 720,172 Q840,179 960,172 Q1080,165 1200,172 Q1320,179 1440,172" stroke="rgba(26,107,60,0.25)" stroke-width="1.5" fill="none"/>
+
+        <!-- ITAIPÚ BINACIONAL — silueta de la represa -->
+        <g transform="translate(20,55)" opacity="0.22">
+          <!-- Cuerpo principal de la presa -->
+          <rect x="0" y="48" width="460" height="52" rx="3" fill="white"/>
+          <!-- Detalles superiores (sala de máquinas) -->
+          <rect x="0" y="36" width="460" height="14" rx="2" fill="rgba(255,255,255,0.85)"/>
+          <!-- Torre de control -->
+          <rect x="200" y="8" width="18" height="30" rx="2" fill="white"/>
+          <rect x="193" y="5" width="32" height="6" rx="1" fill="white"/>
+          <!-- Compuertas (vertedouro) -->
+          <rect x="40"  y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="90"  y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="140" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="190" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="240" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="290" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="340" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <rect x="390" y="68" width="28" height="35" rx="2" fill="rgba(0,0,0,0.55)"/>
+          <!-- Agua cayendo por compuertas (efecto) -->
+          <path d="M40,103 Q54,115 68,103" stroke="rgba(26,107,60,0.7)" stroke-width="2" fill="none"/>
+          <path d="M90,103 Q104,115 118,103" stroke="rgba(26,107,60,0.7)" stroke-width="2" fill="none"/>
+          <path d="M140,103 Q154,115 168,103" stroke="rgba(26,107,60,0.7)" stroke-width="2" fill="none"/>
+          <path d="M190,103 Q204,115 218,103" stroke="rgba(26,107,60,0.7)" stroke-width="2" fill="none"/>
+          <path d="M240,103 Q254,115 268,103" stroke="rgba(26,107,60,0.7)" stroke-width="2" fill="none"/>
+          <!-- Líneas eléctricas (torres de transmisión) -->
+          <line x1="460" y1="36" x2="510" y2="10" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <line x1="460" y1="36" x2="560" y2="8" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <line x1="460" y1="36" x2="620" y2="12" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+        </g>
+
+        <!-- PUENTE DE LA AMISTAD — silueta del puente -->
+        <g transform="translate(590,10)" opacity="0.18">
+          <!-- Tablero del puente -->
+          <rect x="0" y="138" width="340" height="10" rx="2" fill="white"/>
+          <!-- Arco principal -->
+          <path d="M10,138 Q170,18 330,138" stroke="white" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <!-- Torres del arco -->
+          <rect x="30" y="90" width="10" height="58" rx="2" fill="white"/>
+          <rect x="300" y="90" width="10" height="58" rx="2" fill="white"/>
+          <!-- Cables tirantes -->
+          <line x1="170" y1="18" x2="65"  y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="95"  y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="125" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="155" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="185" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="215" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="245" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <line x1="170" y1="18" x2="275" y2="138" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <!-- Vehículos (pequeños rectángulos en el puente) -->
+          <rect x="50"  y="132" width="18" height="7" rx="2" fill="rgba(26,107,60,0.6)"/>
+          <rect x="120" y="132" width="22" height="7" rx="2" fill="rgba(255,255,255,0.3)"/>
+          <rect x="220" y="132" width="18" height="7" rx="2" fill="rgba(26,107,60,0.6)"/>
+        </g>
+
+        <!-- TRABAJADORES — siluetas de operarios -->
+        <g transform="translate(1080,40)" opacity="0.19">
+          <!-- Trabajador 1 — casco industrial -->
+          <circle cx="35" cy="28" r="16" fill="white"/>
+          <path d="M17,24 Q35,4 53,24 L54,32 L16,32Z" fill="rgba(26,107,60,0.85)"/>
+          <path d="M20,44 Q35,40 50,44 L52,100 L18,100Z" fill="white"/>
+          <path d="M20,50 L8,80" stroke="white" stroke-width="8" stroke-linecap="round"/>
+          <path d="M50,50 L62,75" stroke="white" stroke-width="8" stroke-linecap="round"/>
+          <rect x="20" y="100" width="12" height="30" rx="4" fill="white"/>
+          <rect x="38" y="100" width="12" height="30" rx="4" fill="white"/>
+
+          <!-- Trabajador 2 — overol (más alejado) -->
+          <circle cx="110" cy="34" r="13" fill="rgba(255,255,255,0.8)"/>
+          <path d="M95,30 Q110,13 125,30 L126,37 L94,37Z" fill="rgba(26,107,60,0.75)"/>
+          <path d="M97,48 Q110,44 123,48 L125,96 L95,96Z" fill="rgba(255,255,255,0.8)"/>
+          <path d="M97,54 L87,80" stroke="rgba(255,255,255,0.8)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M123,54 L133,76" stroke="rgba(255,255,255,0.8)" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- Trabajador 3 — personal de blanco -->
+          <circle cx="175" cy="38" r="11" fill="rgba(255,255,255,0.65)"/>
+          <path d="M162,35 Q175,20 188,35 L189,41 L161,41Z" fill="rgba(200,200,200,0.6)"/>
+          <path d="M163,51 Q175,47 187,51 L189,92 L161,92Z" fill="rgba(255,255,255,0.65)"/>
+          <path d="M163,56 L154,78" stroke="rgba(255,255,255,0.65)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M187,56 L196,76" stroke="rgba(255,255,255,0.65)" stroke-width="6" stroke-linecap="round"/>
+        </g>
+
+        <!-- TRIPLE FRONTERA — tres triángulos convergentes -->
+        <g transform="translate(1360,35)" opacity="0.2">
+          <polygon points="40,0 70,48 10,48" fill="rgba(255,255,255,0.9)"/>
+          <text x="40" y="38" text-anchor="middle" font-size="9" fill="rgba(0,0,0,0.5)" font-family="sans-serif" font-weight="bold">PY</text>
+          <polygon points="5,55 35,55 20,100" fill="rgba(255,255,255,0.65)"/>
+          <text x="20" y="88" text-anchor="middle" font-size="7" fill="rgba(0,0,0,0.4)" font-family="sans-serif">AR</text>
+          <polygon points="45,55 75,55 60,100" fill="rgba(255,255,255,0.5)"/>
+          <text x="60" y="88" text-anchor="middle" font-size="7" fill="rgba(0,0,0,0.4)" font-family="sans-serif">BR</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Desplazá para explorar</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== BANDA IMPACTO — MARQUEE ===== -->
+  <section class="impact-band">
+    <div class="marquee-outer">
+      <div class="marquee-track">
+        <span>Itaipú Binacional</span><span class="dot-m">◆</span>
+        <span>Puente de la Amistad</span><span class="dot-m">◆</span>
+        <span>Empresas Subcontratadas</span><span class="dot-m">◆</span>
+        <span>Fundación TESAI</span><span class="dot-m">◆</span>
+        <span>Ciudad del Este</span><span class="dot-m">◆</span>
+        <span>Triple Frontera</span><span class="dot-m">◆</span>
+        <span>Alto Paraná · Paraguay</span><span class="dot-m">◆</span>
+        <span>CUT-CSA · Res. 1711</span><span class="dot-m">◆</span>
+        <span class="lema-marquee">Unidad · Solidaridad · Lealtad</span><span class="dot-m">◆</span>
+        <!-- Duplicado para bucle infinito -->
+        <span>Itaipú Binacional</span><span class="dot-m">◆</span>
+        <span>Puente de la Amistad</span><span class="dot-m">◆</span>
+        <span>Empresas Subcontratadas</span><span class="dot-m">◆</span>
+        <span>Fundación TESAI</span><span class="dot-m">◆</span>
+        <span>Ciudad del Este</span><span class="dot-m">◆</span>
+        <span>Triple Frontera</span><span class="dot-m">◆</span>
+        <span>Alto Paraná · Paraguay</span><span class="dot-m">◆</span>
+        <span>CUT-CSA · Res. 1711</span><span class="dot-m">◆</span>
+        <span class="lema-marquee">Unidad · Solidaridad · Lealtad</span><span class="dot-m">◆</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTADORES ANIMADOS ===== -->
+  <section class="counters-section">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item" data-count>
+          <div class="counter-top">
+            <span class="counter-num" data-target="1250">0</span><span class="counter-suffix">+</span>
+          </div>
+          <span class="counter-label">Trabajadores afiliados</span>
+        </div>
+        <div class="counter-item" data-count>
+          <div class="counter-top">
+            <span class="counter-num" data-target="34">0</span>
+          </div>
+          <span class="counter-label">Años de trayectoria</span>
+        </div>
+        <div class="counter-item" data-count>
+          <div class="counter-top">
+            <span class="counter-num" data-target="14">0</span>
+          </div>
+          <span class="counter-label">Secretarías activas</span>
+        </div>
+        <div class="counter-item" data-count>
+          <div class="counter-top">
+            <span class="counter-num" data-target="3">0</span>
+          </div>
+          <span class="counter-label">Sectores representados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRIPLE FRONTERA — IDENTIDAD REGIONAL ===== -->
+  <section class="triple-frontera-section">
+    <div class="tf-grid">
+
+      <div class="tf-item" data-aos>
+        <div class="tf-bg tf-bg-1"></div>
+        <div class="tf-body">
+          <div class="tf-icon-wrap">
+            <svg viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Represa Itaipú simplificada -->
+              <rect x="2" y="22" width="76" height="22" rx="2" fill="rgba(255,255,255,0.9)"/>
+              <rect x="2" y="16" width="76" height="8" rx="1" fill="rgba(255,255,255,0.7)"/>
+              <rect x="12" y="30" width="9" height="15" rx="1" fill="rgba(0,0,0,0.5)"/>
+              <rect x="27" y="30" width="9" height="15" rx="1" fill="rgba(0,0,0,0.5)"/>
+              <rect x="42" y="30" width="9" height="15" rx="1" fill="rgba(0,0,0,0.5)"/>
+              <rect x="57" y="30" width="9" height="15" rx="1" fill="rgba(0,0,0,0.5)"/>
+              <path d="M2,44 Q40,52 78,44" stroke="rgba(26,200,100,0.8)" stroke-width="2.5" fill="none"/>
+              <line x1="78" y1="22" x2="78" y2="4"  stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+              <line x1="78" y1="4"  x2="90" y2="1"  stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="tf-tag">Potencia mundial</span>
+          <h3>Itaipú Binacional</h3>
+          <p>La represa hidroeléctrica binacional más grande del mundo, generando energía para Paraguay y Brasil. El corazón productivo de nuestra región.</p>
+        </div>
+      </div>
+
+      <div class="tf-item tf-featured" data-aos>
+        <div class="tf-bg tf-bg-2"></div>
+        <div class="tf-body">
+          <div class="tf-icon-wrap">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Triple frontera — tres triángulos -->
+              <polygon points="40,2 62,38 18,38" fill="rgba(255,255,255,0.95)"/>
+              <text x="40" y="30" text-anchor="middle" font-size="10" fill="rgba(26,107,60,0.9)" font-family="Arial" font-weight="bold">PY</text>
+              <polygon points="12,44 38,44 25,76" fill="rgba(255,255,255,0.7)"/>
+              <text x="25" y="68" text-anchor="middle" font-size="8" fill="rgba(0,0,0,0.5)" font-family="Arial" font-weight="bold">AR</text>
+              <polygon points="42,44 68,44 55,76" fill="rgba(255,255,255,0.55)"/>
+              <text x="55" y="68" text-anchor="middle" font-size="8" fill="rgba(0,0,0,0.45)" font-family="Arial" font-weight="bold">BR</text>
+              <!-- Punto de convergencia -->
+              <circle cx="40" cy="40" r="4" fill="white"/>
+            </svg>
+          </div>
+          <span class="tf-tag">Nuestro territorio</span>
+          <h3>La Triple Frontera</h3>
+          <p>Paraguay, Brasil y Argentina se encuentran en esta región única del mundo. Ciudad del Este, el epicentro económico donde SICONAP/S ejerce su representación.</p>
+          <div class="tf-banderas">
+            <span title="Paraguay">🇵🇾</span>
+            <span title="Brasil">🇧🇷</span>
+            <span title="Argentina">🇦🇷</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tf-item" data-aos>
+        <div class="tf-bg tf-bg-3"></div>
+        <div class="tf-body">
+          <div class="tf-icon-wrap">
+            <svg viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Trabajadores — siluetas -->
+              <circle cx="22" cy="18" r="10" fill="rgba(255,255,255,0.9)"/>
+              <path d="M10,26 Q22,22 34,26 L36,60 L8,60Z" fill="rgba(255,255,255,0.9)"/>
+              <path d="M10,28 Q22,22 34,26" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+              <!-- Casco -->
+              <path d="M10,16 Q22,2 34,16 L34,22 L10,22Z" fill="rgba(26,107,60,0.85)"/>
+              <!-- Segundo trabajador -->
+              <circle cx="56" cy="22" r="9" fill="rgba(255,255,255,0.7)"/>
+              <path d="M46,30 Q56,26 66,30 L68,60 L44,60Z" fill="rgba(255,255,255,0.7)"/>
+              <path d="M46,20 Q56,8 66,20 L66,25 L46,25Z" fill="rgba(200,200,200,0.6)"/>
+              <!-- Engranaje -->
+              <circle cx="58" cy="50" r="8" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+              <circle cx="58" cy="50" r="3" fill="rgba(255,255,255,0.5)"/>
+            </svg>
+          </div>
+          <span class="tf-tag">+1.000 afiliados</span>
+          <h3>La fuerza laboral</h3>
+          <p>Conductores, operarios, personal técnico y administrativo. La gente que hace funcionar la región merece representación sindical real y efectiva.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider wave-dark-to-light" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 Q360,60 720,30 Q1080,0 1440,30 L1440,60 L0,60Z" fill="#f5f5f5"/></svg>
+  </div>
+
+  <!-- ===== QUIÉNES SOMOS ===== -->
+  <section id="quienes-somos" class="section section-light">
+    <div class="container">
+      <div class="section-label">Nuestra Historia</div>
+      <h2 class="section-title">Quiénes <span class="green">somos</span></h2>
+      <p class="section-intro">
+        El <strong>SICONAP/S</strong> surgió de la necesidad real de organización de los trabajadores
+        conductores del Alto Paraná. Su historia es la historia de la lucha obrera en la
+        Triple Frontera — una lucha que continúa hoy con más de 1.250 afiliados.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1989 — El contexto que lo hizo necesario</div>
+          <div class="timeline-card">
+            <h3>El origen: choferes sin protección</h3>
+            <p>
+              Tras la apertura democrática en Paraguay, proliferaron las empresas de transporte
+              contratistas de Itaipú Binacional. Los choferes intentaron organizarse bajo el
+              sindicato <em>"SIEMPRE"</em> dentro de la empresa Rodados S.A. La respuesta del
+              directorio fue cambiar la razón social de la empresa para disolver la organización.
+              Quedó claro que sin un sindicato independiente, los derechos serían siempre vulnerables.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">19 de noviembre de 1991</div>
+          <div class="timeline-card">
+            <h3>Fundación del SICONAP</h3>
+            <p>
+              Mediante una Asamblea General histórica, los trabajadores fundaron el
+              <strong>Sindicato de Conductores del Alto Paraná (SICONAP)</strong> —
+              Res. Nro. 1711 — marcando un hito en la defensa de los derechos laborales
+              del sector transporte al servicio de Itaipú. Nació con un lema que sigue
+              vigente: <em>Unidad, Solidaridad y Lealtad.</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Primeros años — Prueba de fuego</div>
+          <div class="timeline-card">
+            <h3>Defensa de la democracia y resistencia interna</h3>
+            <p>
+              El SICONAP participó activamente en movilizaciones por los derechos democráticos.
+              Enfrentó también una crisis interna cuando parte de la directiva aceptó incentivos
+              para renunciar. Los compañeros <strong>Aldo Snead Villasanti</strong> y
+              <strong>Ramón H. Barboza Ibarra</strong> rechazaron la oferta y, mediante una
+              Asamblea Extraordinaria, tomaron la conducción. Bajo esa nueva dirección el
+              sindicato salió fortalecido.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Consolidación — Alianzas y victorias</div>
+          <div class="timeline-card">
+            <h3>Jornada de 8 horas, salario mensualizado y seguro médico</h3>
+            <p>
+              La afiliación a la <strong>Unión de Sindicatos de Trabajadores del Transporte (USTT)</strong>
+              potenciaron la capacidad de lucha. El sindicato conquistó la jornada laboral de
+              8 horas, el salario mensualizado y la inclusión de todos los choferes en el
+              sistema de seguro médico. A nivel internacional, SICONAP/S fue representado en
+              foros de la <strong>OIT en Ginebra</strong> y en el <strong>Mercosur</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Expansión — De SICONAP a SICONAP/S</div>
+          <div class="timeline-card">
+            <h3>Ampliación sectorial y el CCCT histórico</h3>
+            <p>
+              La Asamblea aprobó modificar el estatuto para representar a <em>todos</em> los
+              trabajadores en servicios de la Binacional, no solo conductores. Nació así el
+              <strong>Sindicato de Conductores y Servicios del Alto Paraná — SICONAP/S</strong>.
+              Se firmó el <strong>Contrato Colectivo de Condiciones de Trabajo (CCCT)</strong>
+              para afiliados en Itaipú Binacional, la Fundación TESAI y el Convenio Social
+              Itaipú/TESAI — un hito histórico para la clase trabajadora de la región.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Hoy — 2025</div>
+          <div class="timeline-card highlight-card">
+            <h3>+1.250 afiliados, local propio y liderazgo en la CUT</h3>
+            <p>
+              Con más de <strong>1.250 asociados</strong>, local propio en el Barrio Santa Ana
+              y tres de sus fundadores aún al frente — entre ellos <strong>Aldo Snead Villasanti</strong>,
+              quien presidió la <strong>Central Unitaria de Trabajadores (CUT)</strong> durante
+              dos períodos consecutivos — SICONAP/S es hoy la referencia sindical del Alto Paraná
+              y la primera institución gremial de la zona en contar con presencia digital.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider wave-light-to-dark" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,20 Q360,55 720,20 Q1080,-10 1440,20 L1440,0 L0,0Z" fill="#f5f5f5"/></svg>
+  </div>
+
+  <!-- ===== COMISIÓN DIRECTIVA ===== -->
+  <section id="directiva" class="section section-dark">
+    <div class="container">
+      <div class="section-label light">Conducción Institucional</div>
+      <h2 class="section-title light">Comisión <span class="green">Directiva</span></h2>
+      <p class="section-intro light">
+        Las personas elegidas democráticamente por los trabajadores para conducir el sindicato
+        con honestidad, compromiso y vocación de servicio.
+      </p>
+
+      <!-- ── COMISIÓN DIRECTIVA ── -->
+      <div class="directiva-group-label">Comisión Directiva</div>
+      <div class="directiva-grid" id="directiva-grid">
+
+        <div class="directiva-card featured" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">JS</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría General</span>
+            <h3 class="card-nombre">Juan Aldo Ernesto Snead Villasanti</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">EG</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría General Adjunto</span>
+            <h3 class="card-nombre">Ever Hugo Galeano Samaniego</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">AA</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Actas</span>
+            <h3 class="card-nombre">Antonio Manuel Ayala Speranza</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">LR</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Relaciones</span>
+            <h3 class="card-nombre">Luis Maria Riveros</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">CO</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Organización</span>
+            <h3 class="card-nombre">Cesar Luis Ojeda Paredes</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">MC</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Finanzas</span>
+            <h3 class="card-nombre">Mariano Caballero Caballero</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">PB</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Acción Social</span>
+            <h3 class="card-nombre">Patricia Baez Iriarte</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">FS</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Prensa y Propaganda</span>
+            <h3 class="card-nombre">Francisco Sadan Maiz</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">AN</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Educación</span>
+            <h3 class="card-nombre">Angel Luis Maria Nuñez Gonzalez</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">OR</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Transporte</span>
+            <h3 class="card-nombre">Oscar Dario Romero Benitez</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">AA</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Conflictos</span>
+            <h3 class="card-nombre">Aldo Andres Ayala Florentin</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">MG</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de la Mujer</span>
+            <h3 class="card-nombre">Maria Ernesta Gauto Sanchez</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">BZ</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Deportes</span>
+            <h3 class="card-nombre">Benjamin Zelaya Cardenas</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">TB</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretaría de Cultura</span>
+            <h3 class="card-nombre">Tomasa Bogado Silva</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── VOCALES ── -->
+      <div class="directiva-group-label" style="margin-top:48px">Vocales</div>
+      <div class="directiva-grid directiva-grid-5">
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">CB</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Vocal Primero</span>
+            <h3 class="card-nombre">Carmen Benitez Cristaldo</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">AA</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Vocal Segundo</span>
+            <h3 class="card-nombre">Andrea Soledad Alvarenga Aguilar</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">CL</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Vocal Tercero</span>
+            <h3 class="card-nombre">Celso Daniel Lopez Cano</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">CM</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Vocal Cuarto</span>
+            <h3 class="card-nombre">Carlos Dario Matiauda Valdez</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">BC</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Vocal Quinto</span>
+            <h3 class="card-nombre">Blanca Rosa Cañete</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── SÍNDICOS ── -->
+      <div class="directiva-group-label" style="margin-top:48px">Síndicos</div>
+      <div class="directiva-grid directiva-grid-2">
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">JM</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Síndico Titular</span>
+            <h3 class="card-nombre">Juan Martinez Osorio</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">RC</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Síndico Suplente</span>
+            <h3 class="card-nombre">Robert Cesar Coronel</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── COMISIÓN ELECTORAL ── -->
+      <div class="directiva-group-label" style="margin-top:48px">Comisión Electoral</div>
+      <div class="directiva-grid directiva-grid-5">
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">CS</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Presidente</span>
+            <h3 class="card-nombre">Carlos Alberto Silva Rotela</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">NA</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Secretario</span>
+            <h3 class="card-nombre">Nelson Ayala Aranda</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">AM</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Miembro Titular</span>
+            <h3 class="card-nombre">Abel Montania</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">JB</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Miembro Suplente</span>
+            <h3 class="card-nombre">Jorge Rodrigo Benitez Mongelos</h3>
+          </div>
+        </div>
+
+        <div class="directiva-card" data-aos>
+          <div class="card-avatar"><span class="avatar-placeholder">HL</span></div>
+          <div class="card-info">
+            <span class="card-cargo">Miembro Suplente</span>
+            <h3 class="card-nombre">Hilian Adriana Lovera Sanabria</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COBERTURA ===== -->
+  <section id="cobertura" class="section section-light">
+    <div class="container">
+      <div class="section-label">Alcance Sindical</div>
+      <h2 class="section-title">¿A quiénes <span class="green">representamos</span>?</h2>
+      <p class="section-intro">
+        SICONAP/S extiende su protección a trabajadores de distintos sectores vinculados a
+        las instituciones más importantes de la región.
+      </p>
+
+      <div class="cobertura-grid">
+
+        <!-- ITAIPÚ CUADRO PROPIO -->
+        <div class="cobertura-card" data-aos>
+          <div class="cobertura-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2.5"/><path d="M24 10 L24 24 L34 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M14 24 L34 24" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 3"/></svg>
+          </div>
+          <h3>Itaipú Binacional</h3>
+          <p class="cobertura-sub">Cuadro Propio</p>
+          <p>
+            Trabajadores que integran el plantel permanente de la entidad hidroeléctrica binacional
+            más grande del mundo, la <strong>Itaipú Binacional</strong>. Personal de operación,
+            mantenimiento, administración y servicios técnicos especializados.
+          </p>
+          <div class="cobertura-badge">Cuadro Propio Itaipú</div>
+        </div>
+
+        <!-- EMPRESAS SUBCONTRATADAS -->
+        <div class="cobertura-card featured-card" data-aos>
+          <div class="cobertura-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 14V10a2 2 0 012-2h12a2 2 0 012 2v4" stroke="currentColor" stroke-width="2.5"/><path d="M6 26h36" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Empresas Subcontratadas</h3>
+          <p class="cobertura-sub">Servicios permanentes en Itaipú</p>
+          <p>
+            Personal dependiente de empresas contratadas por Itaipú Binacional para la
+            prestación de servicios de carácter permanente en áreas esenciales:
+          </p>
+          <ul class="cobertura-list">
+            <li>Transporte</li>
+            <li>Vigilancia y seguridad</li>
+            <li>Servidumbre</li>
+            <li>Mantenimiento de redes eléctricas</li>
+            <li>Jardinería y áreas verdes</li>
+            <li>Otros servicios permanentes</li>
+          </ul>
+          <div class="cobertura-badge green-badge">Mayor cobertura</div>
+        </div>
+
+        <!-- FUNDACIÓN TESAI -->
+        <div class="cobertura-card" data-aos>
+          <div class="cobertura-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L40 16 L40 32 L24 42 L8 32 L8 16 Z" stroke="currentColor" stroke-width="2.5"/><path d="M24 18 L24 30 M18 24 L30 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Fundación TESAI</h3>
+          <p class="cobertura-sub">Personal directo y convenio social</p>
+          <p>
+            Cobertura integral para los trabajadores de la Fundación TESAI en dos modalidades:
+          </p>
+          <ul class="cobertura-list">
+            <li><strong>Cuadro propio:</strong> Personal administrativo, de apoyo y técnico contratado directamente por la Fundación</li>
+            <li><strong>Convenio Social Itaipú–TESAI:</strong> Trabajadores vinculados a la Fundación mediante el convenio de colaboración social entre ambas instituciones</li>
+          </ul>
+          <div class="cobertura-badge">Convenio Itaipú–TESAI</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section id="testimonios" class="section section-dark">
+    <div class="container">
+      <div class="section-label light">Lo que dicen nuestros afiliados</div>
+      <h2 class="section-title light">Voces que <span class="green">respaldan</span> nuestra historia</h2>
+      <p class="section-intro light">Más de 1.000 trabajadores confían en SICONAP/S. Estas son algunas de sus historias.</p>
+
+      <div class="testimonios-grid">
+
+        <div class="testimonio-card" data-aos>
+          <div class="testimonio-quote">"</div>
+          <p class="testimonio-text">
+            Llevo más de una década como chofer de empresa contratista de Itaipú. Antes del SICONAP/S
+            trabajábamos sin jornada definida ni seguro médico. El sindicato peleó por nosotros
+            y hoy tenemos 8 horas, salario mensualizado y cobertura médica. Eso vale más que cualquier cosa.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">JV</div>
+            <div>
+              <strong>J. Villalba</strong>
+              <span>Conductor — empresa contratista Itaipú · Más de 10 años afiliado</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card destacado" data-aos>
+          <div class="testimonio-quote">"</div>
+          <p class="testimonio-text">
+            Trabajo en la Fundación TESAI y cuando surgieron dudas sobre nuestro convenio laboral,
+            SICONAP/S nos explicó cada artículo del CCCT y nos defendió. Tener un sindicato con
+            34 años de experiencia y con representación en la OIT es algo que no se improvisa.
+            Es garantía real.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">MS</div>
+            <div>
+              <strong>M. Sánchez</strong>
+              <span>Personal técnico Fundación TESAI · Afiliada desde 2018</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonio-card" data-aos>
+          <div class="testimonio-quote">"</div>
+          <p class="testimonio-text">
+            Soy del área de mantenimiento de redes eléctricas. Somos los que menos visibilidad
+            tenemos pero SICONAP/S nos trata igual que a todos. El Contrato Colectivo que firmaron
+            con Itaipú nos cubre a todos, sin distinción. Eso es solidaridad de verdad.
+          </p>
+          <div class="testimonio-autor">
+            <div class="testimonio-avatar">RM</div>
+            <div>
+              <strong>R. Molinas</strong>
+              <span>Mantenimiento de redes eléctricas · 6 años afiliado</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTICIAS ===== -->
+  <section id="noticias" class="section section-light">
+    <div class="container">
+      <div class="section-label">Actualidad Sindical</div>
+      <h2 class="section-title">Últimas <span class="green">noticias</span></h2>
+      <p class="section-intro">Mantenete informado sobre los logros, actividades y novedades de SICONAP/S.</p>
+
+      <div class="noticias-grid">
+
+        <div class="noticia-card" data-aos>
+          <div class="noticia-img noticia-img-1">
+            <span class="noticia-categoria logro">Logro Sindical</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-fecha">Noviembre 2024 · 33° Aniversario</span>
+            <h3>SICONAP/S celebra 33 años de lucha sindical ininterrumpida en el Alto Paraná</h3>
+            <p>El 19 de noviembre se conmemoró el 33° aniversario de fundación con un acto institucional en el que participaron afiliados, autoridades sindicales y representantes de Itaipú Binacional y la Fundación TESAI.</p>
+            <a href="https://www.facebook.com/siconaps/" target="_blank" rel="noopener" class="noticia-link">Ver en Facebook →</a>
+          </div>
+        </div>
+
+        <div class="noticia-card" data-aos>
+          <div class="noticia-img noticia-img-2">
+            <span class="noticia-categoria institucional">Logro Histórico</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-fecha">CCCT — Hito institucional</span>
+            <h3>Firma del Contrato Colectivo de Condiciones de Trabajo con Itaipú, TESAI y Convenio Social</h3>
+            <p>SICONAP/S alcanzó la firma del CCCT para sus afiliados en Itaipú Binacional, la Fundación TESAI y el Convenio Social Itaipú/TESAI — una de las conquistas más importantes en la historia del sindicato.</p>
+            <a href="#asociate" class="noticia-link">Quiero estar cubierto →</a>
+          </div>
+        </div>
+
+        <div class="noticia-card" data-aos>
+          <div class="noticia-img noticia-img-3">
+            <span class="noticia-categoria afiliacion">Internacional</span>
+          </div>
+          <div class="noticia-body">
+            <span class="noticia-fecha">Representación mundial</span>
+            <h3>SICONAP/S presente en la OIT en Ginebra y en foros del Mercosur</h3>
+            <p>El sindicato ha sido representado en foros, seminarios y congresos de la Organización Internacional del Trabajo (OIT) en Ginebra y en el Mercosur, posicionando la voz de los trabajadores del Alto Paraná a nivel global.</p>
+            <a href="#quienes-somos" class="noticia-link">Conocer nuestra historia →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section id="galeria" class="section section-dark">
+    <div class="container">
+      <div class="section-label light">Nuestra historia en imágenes</div>
+      <h2 class="section-title light">Galería <span class="green">institucional</span></h2>
+      <p class="section-intro light">Momentos que reflejan la fuerza, la unidad y el compromiso de SICONAP/S.</p>
+
+      <div class="galeria-filtros">
+        <button class="filtro-btn active" data-filtro="todos">Todos</button>
+        <button class="filtro-btn" data-filtro="asamblea">Asambleas</button>
+        <button class="filtro-btn" data-filtro="evento">Eventos</button>
+        <button class="filtro-btn" data-filtro="directiva">Directiva</button>
+        <button class="filtro-btn" data-filtro="trabajadores">Trabajadores</button>
+      </div>
+
+      <div class="galeria-grid" id="galeriaGrid">
+
+        <div class="galeria-item" data-categoria="asamblea" data-titulo="Asamblea General Ordinaria 2025" data-desc="Más de 400 afiliados participaron de la asamblea anual donde se aprobó el balance y el plan de acción.">
+          <div class="galeria-img gi-1"></div>
+          <div class="galeria-overlay"><span>Asamblea General 2025</span></div>
+        </div>
+
+        <div class="galeria-item grande" data-categoria="evento" data-titulo="Día Internacional del Trabajador — 1° de Mayo" data-desc="SICONAP/S encabezó la marcha del Día del Trabajador en Ciudad del Este junto a cientos de afiliados.">
+          <div class="galeria-img gi-2"></div>
+          <div class="galeria-overlay"><span>1° de Mayo 2025</span></div>
+        </div>
+
+        <div class="galeria-item" data-categoria="directiva" data-titulo="Comisión Directiva en sesión" data-desc="Reunión ordinaria de la Comisión Directiva para evaluar acuerdos y planificar acciones gremiales.">
+          <div class="galeria-img gi-3"></div>
+          <div class="galeria-overlay"><span>Sesión Directiva</span></div>
+        </div>
+
+        <div class="galeria-item" data-categoria="trabajadores" data-titulo="Trabajadores del sector transporte" data-desc="Afiliados del sector transporte de Itaipú Binacional en actividad sindical.">
+          <div class="galeria-img gi-4"></div>
+          <div class="galeria-overlay"><span>Sector Transporte</span></div>
+        </div>
+
+        <div class="galeria-item grande" data-categoria="asamblea" data-titulo="Acto conmemorativo — 33 años de SICONAP/S" data-desc="Celebración del 33° aniversario de fundación del sindicato con la presencia de autoridades y afiliados.">
+          <div class="galeria-img gi-5"></div>
+          <div class="galeria-overlay"><span>33° Aniversario</span></div>
+        </div>
+
+        <div class="galeria-item" data-categoria="evento" data-titulo="Capacitación sindical" data-desc="Jornada de formación y capacitación para delegados y representantes de los distintos sectores.">
+          <div class="galeria-img gi-6"></div>
+          <div class="galeria-overlay"><span>Capacitación Sindical</span></div>
+        </div>
+
+        <div class="galeria-item" data-categoria="trabajadores" data-titulo="Personal de Fundación TESAI" data-desc="Trabajadores administrativos y técnicos de la Fundación TESAI, afiliados al sindicato.">
+          <div class="galeria-img gi-7"></div>
+          <div class="galeria-overlay"><span>Fundación TESAI</span></div>
+        </div>
+
+        <div class="galeria-item" data-categoria="directiva" data-titulo="Firma de convenio colectivo" data-desc="La Comisión Directiva firma el convenio colectivo que garantiza mejoras salariales para los afiliados.">
+          <div class="galeria-img gi-8"></div>
+          <div class="galeria-overlay"><span>Firma de Convenio</span></div>
+        </div>
+
+      </div>
+
+      <p class="galeria-nota">📸 Las fotos institucionales serán incorporadas próximamente.</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-content">
+      <div class="lightbox-img" id="lightboxImg"></div>
+      <div class="lightbox-info">
+        <h3 id="lightboxTitulo"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section section-dark">
+    <div class="container faq-container">
+      <div class="faq-texto" data-aos>
+        <div class="section-label light">Preguntas frecuentes</div>
+        <h2 class="section-title light">Todo lo que necesitás<br><span class="green">saber</span> antes de afiliarte</h2>
+        <p style="color:rgba(255,255,255,0.5);font-size:.95rem;line-height:1.7;margin-top:16px;">
+          Sabemos que tenés dudas. Respondemos las más comunes para que tomes la mejor decisión para tu futuro laboral.
+        </p>
+        <a href="#asociate" class="btn-primary" style="display:inline-block;margin-top:28px;">Me quiero afiliar →</a>
+      </div>
+      <div class="faq-lista" data-aos>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿Quiénes pueden afiliarse a SICONAP/S?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>Pueden afiliarse los trabajadores dependientes de Itaipú Binacional (cuadro propio), de empresas subcontratadas por Itaipú para servicios permanentes (transporte, vigilancia, servidumbre, mantenimiento de redes eléctricas, jardinería, entre otros), y los trabajadores de la Fundación TESAI — tanto del cuadro propio como los vinculados mediante el Convenio Social Itaipú–TESAI (personal administrativo, de apoyo y técnico).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿Qué es el CCCT y qué me garantiza?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>El <strong>Contrato Colectivo de Condiciones de Trabajo (CCCT)</strong> es un acuerdo firmado por SICONAP/S con Itaipú Binacional, la Fundación TESAI y el Convenio Social Itaipú/TESAI. Define por escrito tus derechos, salarios, jornadas y condiciones. Sin sindicato, no existe ese contrato — quedás sujeto únicamente a la voluntad del empleador.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿Qué ocurre si tengo un conflicto con mi empleador?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>SICONAP/S te acompaña con asesoramiento jurídico, representación ante el Ministerio de Trabajo y Justicia Social, y si es necesario, acción colectiva. Con 34 años de trayectoria y experiencia en conflictos ante Itaipú, empresas subcontratadas y TESAI, el sindicato conoce cada detalle del entorno laboral en el que trabajás.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿El sindicato tiene respaldo nacional e internacional?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>Sí. SICONAP/S está afiliado a la <strong>Central Unitaria de Trabajadores (CUT-CSA)</strong> — Res. Nro. 1711 — y ha sido representado en foros de la <strong>Organización Internacional del Trabajo (OIT) en Ginebra</strong> y en el <strong>Mercosur</strong>. Además, el compañero Aldo Snead Villasanti presidió la CUT durante dos períodos consecutivos. No es un sindicato aislado: tiene peso real a nivel nacional e internacional.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿El sindicato realmente puede proteger mi trabajo?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>Los hechos hablan: desde conquistar la jornada de 8 horas y el salario mensualizado para los conductores, hasta firmar el CCCT con Itaipú y TESAI. Más de 1.250 trabajadores confían en SICONAP/S porque lo demostró durante tres décadas. Un trabajador solo no tiene ese poder.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-pregunta">
+            <span>¿Puedo perder mi trabajo por afiliarme?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-respuesta">
+            <p>No. La Constitución Nacional del Paraguay y el Código Laboral protegen expresamente el derecho a la libre afiliación sindical. El despido antisindical es nulo de pleno derecho y pasible de sanción. SICONAP/S tiene los mecanismos legales para defender cualquier represalia — y 34 años de experiencia haciéndolo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POR QUÉ ASOCIARSE ===== -->
+  <section id="beneficios" class="section section-green">
+    <div class="container">
+      <div class="section-label light">Tu decisión más importante</div>
+      <h2 class="section-title light">¿Por qué <span class="underline-white">asociarte</span> a SICONAP/S?</h2>
+
+      <div class="beneficios-grid">
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">⚖️</div>
+          <h3>Defensa legal</h3>
+          <p>Asesoramiento jurídico y representación ante cualquier conflicto laboral con tu empleador.</p>
+        </div>
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">🤝</div>
+          <h3>Negociación colectiva</h3>
+          <p>Tu voz en los convenios colectivos que determinan tu salario, tus horarios y tus condiciones de trabajo.</p>
+        </div>
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">🛡️</div>
+          <h3>Estabilidad laboral</h3>
+          <p>Protección frente a despidos injustificados y garantía de cumplimiento de tus derechos laborales.</p>
+        </div>
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">👨‍👩‍👧‍👦</div>
+          <h3>Impacto familiar</h3>
+          <p>Cuando proteges tu trabajo, protegés a toda tu familia. Tu estabilidad es la estabilidad de los tuyos.</p>
+        </div>
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">📣</div>
+          <h3>Representación real</h3>
+          <p>Más de 1.000 voces unidas tienen un peso que una sola no puede lograr. La fuerza está en el colectivo.</p>
+        </div>
+        <div class="beneficio" data-aos>
+          <div class="beneficio-icon">🏆</div>
+          <h3>Trayectoria comprobada</h3>
+          <p>34 años de historia avalan cada acción del sindicato. No somos nuevos en esta lucha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ASOCIATE CTA ===== -->
+  <section id="asociate" class="section section-dark">
+    <div class="container cta-container">
+      <div class="cta-text" data-aos>
+        <div class="section-label light">Unite a nosotros</div>
+        <h2 class="section-title light">Ser parte de <span class="green">SICONAP/S</span><br>es una decisión que cambia todo</h2>
+        <p class="cta-desc">
+          Si sos trabajador del área de Itaipú Binacional, de sus empresas subcontratadas o de la
+          Fundación TESAI, tenés derecho a ser representado. Completá el formulario y un
+          referente del sindicato se comunicará con vos.
+        </p>
+      </div>
+      <form class="cta-form" id="asociate-form" data-aos>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+595 9XX XXX XXX" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" />
+        </div>
+        <div class="form-group">
+          <label for="sector">Sector de trabajo *</label>
+          <select id="sector" name="sector" required>
+            <option value="" disabled selected>Seleccioná tu sector</option>
+            <option value="itaipu-propio">Itaipú Binacional — Cuadro propio</option>
+            <option value="subcontratada-transporte">Empresa subcontratada — Transporte</option>
+            <option value="subcontratada-vigilancia">Empresa subcontratada — Vigilancia</option>
+            <option value="subcontratada-servidumbre">Empresa subcontratada — Servidumbre</option>
+            <option value="subcontratada-redes">Empresa subcontratada — Mantenimiento redes eléctricas</option>
+            <option value="subcontratada-jardineria">Empresa subcontratada — Jardinería</option>
+            <option value="subcontratada-otro">Empresa subcontratada — Otro servicio</option>
+            <option value="tesai-propio">Fundación TESAI — Cuadro propio</option>
+            <option value="tesai-convenio">Fundación TESAI — Convenio Social Itaipú</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje adicional (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Alguna consulta o situación que quieras mencionar?"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Quiero asociarme →</button>
+        <p class="form-disclaimer">Tus datos son confidenciales y solo serán usados por SICONAP/S para contactarte.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO + MAPA ===== -->
+  <section id="ubicacion" class="section section-light">
+    <div class="container">
+      <div class="section-label">Sede institucional</div>
+      <h2 class="section-title">Encontranos en <span class="green">Ciudad del Este</span></h2>
+    </div>
+    <div class="mapa-wrapper">
+      <div class="mapa-info">
+        <div class="mapa-dato">
+          <div class="mapa-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Dirección</strong>
+            <span>Barrio Santa Ana<br>Ciudad del Este, Alto Paraná<br>Paraguay</span>
+          </div>
+        </div>
+        <div class="mapa-dato">
+          <div class="mapa-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </div>
+          <div>
+            <strong>Teléfono / Fax</strong>
+            <a href="tel:+59561507758">595 61 507758</a>
+          </div>
+        </div>
+        <div class="mapa-dato">
+          <div class="mapa-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <strong>Correo electrónico</strong>
+            <a href="mailto:siconaps@gmail.com">siconaps@gmail.com</a>
+          </div>
+        </div>
+        <div class="mapa-dato">
+          <div class="mapa-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <strong>Horario de atención</strong>
+            <span>Lunes a Viernes<br>07:00 — 15:00 hs</span>
+          </div>
+        </div>
+        <a href="https://wa.me/59561507758?text=Hola%2C%20quiero%20información%20sobre%20cómo%20afiliarme%20a%20SICONAP%2FS"
+           class="btn-primary" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;margin-top:8px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Escribinos por WhatsApp
+        </a>
+      </div>
+      <div class="mapa-embed">
+        <iframe
+          src="https://maps.google.com/maps?q=Ciudad+del+Este,+Alto+Parana,+Paraguay&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación SICONAP/S — Ciudad del Este, Paraguay">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contacto">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="SICONAP/S" class="footer-logo-img" />
+        <p>Sindicato de Conductores y Servicios del Alto Paraná</p>
+        <p class="footer-since">Fundado el 19 de noviembre de 1991</p>
+        <p class="footer-resol">Res. Nro. 1711 · Afiliada a la <strong>CUT-CSA</strong></p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#directiva">Comisión Directiva</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#asociate">Asociate</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>📍 Bo. Santa Ana, Ciudad del Este, Paraguay</p>
+        <p>📞 <a href="tel:+59561507758">595 61 507758</a></p>
+        <p>✉️ <a href="mailto:siconaps@gmail.com">siconaps@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 SICONAP/S — Todos los derechos reservados · Ciudad del Este, Alto Paraná, Paraguay</p>
+    </div>
+  </footer>
+
+  <!-- ===== WHATSAPP FLOTANTE ===== -->
+  <a href="https://wa.me/59561507758?text=Hola%2C%20quiero%20información%20sobre%20cómo%20afiliarme%20a%20SICONAP%2FS"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-label">¡Afiliate!</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
