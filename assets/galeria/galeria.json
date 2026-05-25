@@ -70,5 +70,13 @@
     "etiqueta": "Firma de Convenio",
     "desc": "La Comisión Directiva firma el convenio colectivo que garantiza mejoras salariales para los afiliados.",
     "grande": false
-  }
+  },
+  {
+  "archivo": "asamblea-mayo-2026.jpg",
+  "categoria": "asamblea",
+  "titulo": "Título que aparece en el lightbox",
+  "etiqueta": "Texto sobre la foto",
+  "desc": "Descripción breve para el lightbox.",
+  "grande": false
+}
 ]
