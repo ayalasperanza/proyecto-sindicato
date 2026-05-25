@@ -320,6 +320,44 @@ function cerrarLightbox() {
   document.body.style.overflow = '';
 }
 
+// ── Video motivacional — play personalizado
+(function initVideo() {
+  const video   = document.getElementById('videoSindical');
+  const overlay = document.getElementById('videoPlayOverlay');
+  const playBtn = document.getElementById('videoPlayBtn');
+  if (!video || !overlay) return;
+
+  function reproducir() {
+    video.classList.add('playing');
+    overlay.classList.add('hidden');
+    video.play().catch(() => {});
+  }
+
+  playBtn.addEventListener('click', reproducir);
+  overlay.addEventListener('click', reproducir);
+
+  // Si el usuario pausa, volver a mostrar overlay suavemente
+  video.addEventListener('pause', () => {
+    if (!video.ended) {
+      video.classList.remove('playing');
+      overlay.classList.remove('hidden');
+    }
+  });
+
+  // Al terminar — mostrar overlay con texto distinto
+  video.addEventListener('ended', () => {
+    video.classList.remove('playing');
+    overlay.classList.remove('hidden');
+    const span = playBtn.querySelector('span');
+    if (span) span.textContent = 'Ver de nuevo';
+    // Scroll suave hacia el formulario
+    setTimeout(() => {
+      const form = document.querySelector('#asociate');
+      if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 1200);
+  });
+})();
+
 // ── Smooth scroll para links internos
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {

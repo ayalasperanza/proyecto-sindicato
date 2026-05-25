@@ -1539,6 +1539,113 @@ footer {
 }
 
 /* ===========================
+   VIDEO MOTIVACIONAL
+   =========================== */
+.video-section {
+  background: var(--black);
+  position: relative;
+}
+.video-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(26,107,60,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.video-section .section-intro { margin-bottom: 40px; }
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 0 0 1px rgba(26,107,60,0.3),
+    0 24px 80px rgba(0,0,0,0.7),
+    0 0 60px rgba(26,107,60,0.15);
+  /* Aspect ratio 16:9 */
+  aspect-ratio: 16 / 9;
+  opacity: 0; transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.video-wrapper.visible { opacity: 1; transform: translateY(0); }
+
+.video-player {
+  width: 100%; height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #000;
+  /* Oculto hasta que el usuario presione play */
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.video-player.playing { opacity: 1; }
+
+/* Overlay de play personalizado */
+.video-overlay-play {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.7) 0%,
+    rgba(6,14,7,0.85) 50%,
+    rgba(0,0,0,0.7) 100%
+  );
+  cursor: pointer;
+  transition: opacity .4s ease;
+  /* Fondo decorativo con texto SICONAPS difuminado */
+  backdrop-filter: blur(2px);
+}
+.video-overlay-play.hidden { opacity: 0; pointer-events: none; }
+
+.video-play-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  background: none; border: none; cursor: pointer;
+  color: var(--white);
+  font-family: var(--font-display); font-size: 1.1rem;
+  font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+}
+.video-play-btn:hover { transform: scale(1.08); }
+.video-play-btn:active { transform: scale(0.96); }
+.video-play-btn svg {
+  width: 88px; height: 88px;
+  filter: drop-shadow(0 8px 32px rgba(26,107,60,0.6));
+  animation: play-pulse 2.4s ease-in-out infinite;
+}
+@keyframes play-pulse {
+  0%,100% { filter: drop-shadow(0 8px 32px rgba(26,107,60,0.6)); transform: scale(1); }
+  50%      { filter: drop-shadow(0 12px 48px rgba(26,107,60,0.9)); transform: scale(1.06); }
+}
+
+/* CTA debajo del video */
+.video-cta {
+  text-align: center;
+  opacity: 0; transform: translateY(16px);
+  transition: opacity .6s ease .2s, transform .6s ease .2s;
+}
+.video-cta.visible { opacity: 1; transform: translateY(0); }
+.video-cta .btn-primary {
+  font-size: 1.1rem; padding: 16px 40px;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+
+/* ── Mobile video ── */
+@media (max-width: 768px) {
+  .video-wrapper { border-radius: var(--radius); margin-bottom: 28px; }
+  .video-play-btn svg { width: 72px; height: 72px; }
+  .video-play-btn { font-size: .95rem; gap: 12px; }
+  .video-cta .btn-primary { width: 100%; justify-content: center; font-size: 1rem; }
+}
+@media (max-width: 400px) {
+  .video-play-btn svg { width: 60px; height: 60px; }
+  .video-play-btn { font-size: .85rem; }
+}
+
+/* ===========================
    TOAST DE CONFIRMACIÓN
    =========================== */
 .toast {
